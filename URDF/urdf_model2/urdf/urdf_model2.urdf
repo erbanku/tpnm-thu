@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf_model2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00416583214490639 0.00334298647366014 0.0223458386073551"
+        rpy="0 0 0" />
+      <mass
+        value="0.497237047742587" />
+      <inertia
+        ixx="0.00242007739262166"
+        ixy="-5.04911668703256E-05"
+        ixz="-2.20582761355493E-05"
+        iyy="0.00191108488366341"
+        iyz="3.13922136203839E-05"
+        izz="0.00237712248678461" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_back_Link">
+    <inertial>
+      <origin
+        xyz="8.01009954104983E-19 0.0163136700350873 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.051613375509701" />
+      <inertia
+        ixx="2.56908774007063E-05"
+        ixy="-4.11315298977877E-22"
+        ixz="-4.19191344921327E-21"
+        iyy="4.02847693747286E-05"
+        iyz="6.95741622935505E-21"
+        izz="2.56908774007063E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/right_back_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/right_back_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_back_Joint"
+    type="continuous">
+    <origin
+      xyz="2.5042E-05 -0.13429 -0.035879"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_back_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_back_Link">
+    <inertial>
+      <origin
+        xyz="1.49306791227925E-17 -0.0163136700350873 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.051613375509701" />
+      <inertia
+        ixx="2.56908774007063E-05"
+        ixy="-6.47543362775456E-21"
+        ixz="1.75876854363387E-21"
+        iyy="4.02847693747286E-05"
+        iyz="-5.23630323142531E-22"
+        izz="2.56908774007063E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/left_back_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/left_back_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_back_Link"
+    type="continuous">
+    <origin
+      xyz="2.5042E-05 0.13548 -0.035879"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_back_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="front_Link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 -7.43210141389101E-19 0.00483772824568677"
+        rpy="0 0 0" />
+      <mass
+        value="0.00917157149725227" />
+      <inertia
+        ixx="7.85302309096545E-07"
+        ixy="1.41004767578906E-23"
+        ixz="-1.06421004245823E-22"
+        iyy="5.86870736858524E-07"
+        iyz="2.45652027002629E-23"
+        izz="1.04386382786075E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/front_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/front_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_Joint"
+    type="fixed">
+    <origin
+      xyz="0.08904 0.0005946 -0.06138"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="back_Link">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 7.54483844766988E-19 0.00483772824568677"
+        rpy="0 0 0" />
+      <mass
+        value="0.00917157149725227" />
+      <inertia
+        ixx="7.85302309096545E-07"
+        ixy="9.56059249342909E-24"
+        ixz="1.07228797812769E-22"
+        iyy="5.86870736858523E-07"
+        iyz="-2.75940783536062E-23"
+        izz="1.04386382786075E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/back_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/back_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.08899 0.0005946 -0.06138"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_Link">
+    <inertial>
+      <origin
+        xyz="0.0047653512142667 -7.15299029481579E-18 -0.0266646350931545"
+        rpy="0 0 0" />
+      <mass
+        value="0.222049626794912" />
+      <inertia
+        ixx="0.000111883049646601"
+        ixy="2.88697365741403E-21"
+        ixz="1.14462961585253E-05"
+        iyy="0.00015129492917208"
+        iyz="-3.71706446829591E-22"
+        izz="0.000171930315958033" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_model2/meshes/lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.008475 0.0005946 0.1766"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

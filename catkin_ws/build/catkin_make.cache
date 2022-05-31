@@ -1,0 +1,2 @@
+mbot/mbot_description:mbot/mbot_navigation:ros-arduino-bridge/ros_arduino_bridge:ros-arduino-bridge/ros_arduino_firmware:ros-arduino-bridge/ros_arduino_msgs:ros-arduino-bridge/ros_arduino_python:rplidar_ros:urdf_model2
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/install -G Unix Makefiles

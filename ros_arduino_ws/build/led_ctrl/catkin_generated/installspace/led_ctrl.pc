@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/ros_arduino_ws/install
+
+Name: led_ctrl
+Description: Description of led_ctrl
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
