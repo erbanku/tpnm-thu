@@ -1,0 +1,26 @@
+<launch>
+    
+    <!-- 启动底盘arduino -->
+    <node name="arduino" pkg="ros_arduino_python" type="arduino_node.py" output="screen">
+      <rosparam file="$(find ros_arduino_python)/config/my_arduino_params.yaml" command="load" />
+    </node>
+   
+    <!-- 启动rplidar -->
+    <include file="$(find rplidar_ros)/launch/rplidar2.launch" />
+    
+    <!-- 启动小车urdf -->
+    <param
+        name="robot_description"
+        textfile="$(find mbot_description)/urdf/mbot_description_gazebo2.urdf" />
+
+    <!-- 设置GUI参数，显示关节控制插件 -->
+    <arg name="gui" default="true" />
+    <param name="use_gui" value="$(arg gui)"/>
+
+    <!-- 运行joint_state_publisher节点，发布机器人的关节状态  -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <!-- 运行robot_state_publisher节点，发布tf  -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />    
+
+</launch>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mbot_description">
+    <link name="base_footprint">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+    </link>
+    
+    <gazebo reference="base_footprint">
+        <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0 0 0.0325" rpy="0 0 0" />     
+        <parent link="base_footprint"/>
+        <child link="base_link" />
+    </joint>
+    
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.054502 3.0092E-08 0.03823"
+        rpy="0 0 0" />
+      <mass
+        value="0.55781" />
+      <inertia
+        ixx="0.0010536"
+        ixy="-1.0524E-10"
+        ixz="-0.00034992"
+        iyy="0.0013054"
+        iyz="1.3362E-10"
+        izz="0.0014142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="1.6258E-11 0.0011484 1.0045E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.14183" />
+      <inertia
+        ixx="6.9596E-05"
+        ixy="3.2338E-14"
+        ixz="4.9289E-10"
+        iyy="0.00010882"
+        iyz="2.7988E-14"
+        izz="6.9596E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.083 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-2.1963E-12 -0.0011484 1.8984E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.14183" />
+      <inertia
+        ixx="6.9596E-05"
+        ixy="-1.9148E-15"
+        ixz="4.9264E-10"
+        iyy="0.00010882"
+        iyz="-4.2725E-14"
+        izz="6.9596E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.083 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="caster_link">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 5.3578E-20 3.4694E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0014368" />
+      <inertia
+        ixx="2.816E-08"
+        ixy="0"
+        ixz="4.0783E-56"
+        iyy="2.816E-08"
+        iyz="-3.6734E-40"
+        izz="2.816E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/caster_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint"
+    type="fixed">
+    <origin
+      xyz="0.10754 0 -0.0255"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="0.0047654 9.587E-19 -0.014165"
+        rpy="0 0 0" />
+      <mass
+        value="0.22205" />
+      <inertia
+        ixx="0.00011188"
+        ixy="1.0393E-21"
+        ixz="1.1446E-05"
+        iyy="0.00015129"
+        iyz="7.0121E-21"
+        izz="0.00017193" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/laser_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.50196 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mbot_description/meshes/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0145 0 0.14775"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <!-- friction -->
+  <gazebo reference="caster_link">
+    <mu1>0</mu1>
+    <mu2>0</mu2>
+  </gazebo>
+  
+  <!-- controller -->
+    <gazebo>
+        <plugin name="differential_drive_controller" 
+                filename="libgazebo_ros_diff_drive.so">
+            <rosDebugLevel>Debug</rosDebugLevel>
+            <publishWheelTF>true</publishWheelTF>
+            <robotNamespace>/</robotNamespace>
+            <publishTf>1</publishTf>
+            <publishWheelJointState>true</publishWheelJointState>
+            <alwaysOn>true</alwaysOn>
+            <updateRate>100.0</updateRate>
+            <legacyMode>true</legacyMode>
+            <leftJoint>left_wheel_joint</leftJoint>
+            <rightJoint>right_wheel_joint</rightJoint>
+            <wheelSeparation>0.16</wheelSeparation>
+            <wheelDiameter>0.065</wheelDiameter>
+            <broadcastTF>1</broadcastTF>
+            <wheelTorque>30</wheelTorque>
+            <wheelAcceleration>1.8</wheelAcceleration>
+            <commandTopic>cmd_vel</commandTopic>
+            <odometryFrame>odom</odometryFrame> 
+            <odometryTopic>odom</odometryTopic> 
+            <robotBaseFrame>base_footprint</robotBaseFrame>
+        </plugin>
+    </gazebo>
+    
+    <gazebo reference="laser_link">
+        <sensor type="ray" name="rplidar">
+            <pose>0 0 0 0 0 0</pose>
+            <visualize>false</visualize>
+            <update_rate>5.5</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                    <samples>360</samples>
+                    <resolution>1</resolution>
+                    <min_angle>-3</min_angle>
+                    <max_angle>3</max_angle>
+                  </horizontal>
+                </scan>
+                <range>
+                  <min>0.10</min>
+                  <max>6.0</max>
+                  <resolution>0.01</resolution>
+                </range>
+                <noise>
+                  <type>gaussian</type>
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+            </ray>
+            <plugin name="gazebo_rplidar" filename="libgazebo_ros_laser.so">
+                <topicName>/scan</topicName>
+                <frameName>laser_link</frameName>
+            </plugin>
+        </sensor>
+    </gazebo>
+    
+</robot>

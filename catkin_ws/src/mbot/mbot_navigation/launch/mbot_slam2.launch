@@ -1,0 +1,13 @@
+<launch>
+    
+    <!-- 启动小车 -->
+    <include file="$(find mbot_navigation)/launch/mbot_bringup2.launch" />
+    
+    <!-- 启动slam -->
+    <include file="$(find mbot_navigation)/launch/gmapping.launch"/>
+
+    <!-- 启动rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mbot_navigation)/rviz/gmapping.rviz"/>
+
+</launch>
+

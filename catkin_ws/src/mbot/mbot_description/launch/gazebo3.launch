@@ -1,0 +1,39 @@
+<launch>
+    <!-- 设置launch文件的参数 -->
+    <arg name="world_name" value="$(find mbot_description)/worlds/cloister.world"/>
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+        
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+        <arg name="world_name" value="$(arg world_name)" />
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+        <arg name="headless" value="$(arg headless)"/>
+    </include>
+    
+  <param
+    name="robot_description"
+    textfile="$(find mbot_description)/urdf/mbot_description_gazebo2.urdf" />
+  
+  <node
+    name="joint_state_publisher"
+    pkg="joint_state_publisher"
+    type="joint_state_publisher" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+    
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-urdf -model mbot_description -param robot_description"
+    output="screen" />
+
+</launch>
