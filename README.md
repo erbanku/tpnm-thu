@@ -1,6 +1,6 @@
 # 2022 Technology And Practice Of Non-conventional Machining Course 
 Tsinghua University 2022 Technology And Practice Of Non-conventional Machining Course Raspberry Pi Workspace Files (Team Hello World).
-
+![](https://user-images.githubusercontent.com/79493862/173211236-1a98c622-ca24-4c50-85fd-060cba1ccf15.png)
 > 清华大学`2022春-智能制造实践-90`课程树莓派工作空间代码，By Hello World 小组。
 
 # 关于课程
